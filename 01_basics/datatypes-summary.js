@@ -22,9 +22,17 @@ const MyObj ={
     name:"shashank",
     gender :"female"
 }
+console.log("array");
 const myfunction = function(){
   console.log("Hello World")
 }
-
+myfunction()
 console.log(typeof frinds)
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+
+// ++++++++++++++++++++++++ stack and heap memory in js +++++++++++++++++++++++++++++
+
+// stack will be used in (primitive )
+// heap will be used in (Non-primitive )
