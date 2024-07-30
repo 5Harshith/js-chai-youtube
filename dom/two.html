@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+</head>
+<style>
+    body{background-color: #212121; color: white;}
+</style>
+<body>
+    <!-- <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thursday</div>
+        <div class="day">Friday</div>
+    </div> -->
+    <ul class="parent">
+        <li class="days">1</li>
+        <li class="days">2</li>
+        <li class="days">3</li>
+        <li class="days">4</li>
+        <li class="days">5</li>
+    </ul>
+    
+</body>
+<script>
+    const div = document.querySelector('ul');
+    const addList =document.createElement('li');
+    addList.innerText='sunday'
+    addList.className = "day"
+    addList.id ="500"
+    console.log(addList)
+   console.log(div.firstElementChild)
+    
+    // const addList =document.createElement('li');
+    // addList.innerText='sunday'
+    // addList.className = "day"
+    // addList.id ="500"
+    // console.log(addList)
+    // document.body.appendChild(addList)
+    
+    
+    
+</script>
+</html>
