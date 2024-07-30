@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="parent">
+        <li>paython</li>
+    </ul>
+</body>
+<script>
+    //add list
+    function addList(language){
+        const ul = document.querySelector('.parent')
+        const li =document.createElement('li')
+        li.appendChild(document.createTextNode(language))
+        ul.appendChild(li)
+    }
+    addList("c++")
+    addList("c")
+    //edit 
+   // document.querySelector('li:nth-child(2)').innerText ="android"
+  
+   //otptimezed way 
+   const newli =document.createElement('li')
+   newli.textContent = "figma" 
+   document.querySelector('li:nth-child(2)').replaceWith(newli)
+   
+   //edit with outerHTML
+   const firstele =document.querySelector('li:first-child')
+   firstele.outerHTML ="<li> type Sript </li>"
+
+   //remove 
+   const lastele =document.querySelector('li:last-child');
+   lastele.remove()
+
+</script>
+</html>
