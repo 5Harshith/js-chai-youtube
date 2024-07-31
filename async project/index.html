@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Chai aur code</h2>
+    <button id="stop">STOP</button>
+</body>
+
+<script>
+    //settimeout
+   const changeText= setTimeout(function(){
+    //  console.log("Harshith")
+    document.querySelector('h2').innerText = "best js course"
+    },2000)
+ // now i need to stop the settimeout when i click the button so we use cleartimeout -it require a reference of settimeout
+
+ document.querySelector('#stop').addEventListener('click',function(){
+    clearTimeout(changeText)
+    console.log("stopped")
+ })
+
+
+
+</script>
+</html>
