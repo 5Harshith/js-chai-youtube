@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="color: aliceblue; background-color: #414141;">
+    <h2>Amazing Picture</h2>
+    <div>
+        <ul id="images">
+            <li><img src="https://images.pexels.com/photos/22027141/pexels-photo-22027141/free-photo-of-farmer-in-hat-sitting-on-field.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="photoshop" id="photoshop" width="120px" height="120px"></li>
+            <li><img src="https://images.pexels.com/photos/12646557/pexels-photo-12646557.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="new" id="new" width="120px" height="120px"></li>
+            <li><img src="https://images.pexels.com/photos/27205094/pexels-photo-27205094/free-photo-of-ghosts-in-the-machine-the-ghost-of-a-chance.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="ghosts" id="ghosts" width="120px" height="120px"></li>
+            <li><img src="https://images.pexels.com/photos/20157647/pexels-photo-20157647/free-photo-of-vintage-tram-on-the-street-of-lisbon.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="street" id="street" width="120px" height="120px"></li>
+            <li><img src=https://images.pexels.com/photos/16310530/pexels-photo-16310530/free-photo-of-yard-in-traditional-stone-and-wooden-house.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="house" id="house" width="120px" height="120px"></li>
+            <li><a href="https://www.google.co.in/" id="google" target="_blank">Google</a></li>
+        </ul>
+    </div>
+    
+</body>
+<script>
+    // not use this method
+    // document.getElementById('house').onclick = function(){
+    //     alert("House ")
+    // }
+    //we need to do this approch
+
+    //types ,timestamp ,defaultPrevented 
+    //target ,toElement,srcElement,currentTarget
+    //clientX,clientY,screenX,screenY
+    //altkey,ctrkey,shiftkey,keycode
+    // event capuring
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("clicked inside the Ul")
+    // },true)
+    document.getElementById('images').addEventListener('click',function(e){
+        // console.log("clicked inside the Ul")
+    },false)
+    document.getElementById('house').addEventListener('click',function(e){
+        // console.log("house clicked")
+        e.stopPropagation() // it will stop bubbling and not target the other event
+    },false)
+    
+     //
+     document.getElementById('google').addEventListener('click',function(e){
+        // console.log("google clicked")
+        e.preventDefault()// prevent the link 
+        e.stopPropagation()
+     })
+
+     // task to remove image 
+     document.getElementById('images').addEventListener('click',function(e){
+        console.log(e.target.parentNode)
+        const getImge =e.target.parentNode;
+        getImge.remove() 
+        // getImge.parentNode.removeChild(removeIt) one method
+     },false)
+
+
+
+</script>
+</html>
