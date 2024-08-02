@@ -23,5 +23,5 @@
   // if you try to execute userTwo without New user key it will overwrite the userone so we need to use new key work to create a new instance for one and two user 
 //  const usertwo = User("harshi",12,true)
 const userTwo =new User("kumar",12,true)
- console.log(userOne)
+ console.log(userOne) 
  console.log(userTwo)
