@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=bu, initial-scale=1.0">
+    <title>React Bind </title>
+</head>
+<body>
+    <button>click Bind</button>
+</body>
+<script>
+    class serverAction{
+        constructor()
+        {
+            this.server ="http\:400"
+            this.user ="react"
+            document
+            .querySelector('button')
+            .addEventListener('click', this.handleevent.bind(this))
+            // console.log("hai")
+
+        }
+        
+        
+        handleevent(){
+          console.log("button clicked")
+          console.log(this.server)
+        }
+    }
+
+    const app =new serverAction()
+
+</script>
+</html>
